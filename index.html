@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>alias</title>
+    <title>chance</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -10,20 +10,16 @@
 <body>
 <div class="container">
     <div class="jumbotron">
-        <h1 id="item" class="text-center">Are you ready?</h1>
+        <h1 id="item" class="text-center">Are you ready to test a chance?</h1>
         <p class="text-center">
             <a id="next" class="btn btn-lg btn-block btn-success" href="#" role="button">next</a></p>
     </div>
     <br/>
     <br/>
 
-    <footer>
-        <a id="qamode" href="#" class="btn btn-group-sm">wonna qa</a>
-        | <a id="devmode" href="#" class="btn btn-default">wanna dev</a>
-    </footer>
 </div>
 <script src="jquery.js"></script>
-<script src="dev.js">
+<script src="base.js">
 </script>
 <script>
     function getRandomInRange(min, max) {
@@ -31,29 +27,22 @@
     }
 
     function getRandomItem(items) {
-        return items[getRandomInRange(0, items.length)]
+        var index=getRandomInRange(0, items.length);
+        rez=items[index];
+        items.splice(index,1);
+        console.log(items.length);
+        return rez;
     }
 
     $(function () {
-        var items = base['dev'];
+        var items = base;
         console.log(items[items.length - 1]);
         $("#next").click(function () {
             var index = getRandomInRange(0, items.length);
-            //alert(items[index]);
-            $("#item").text(items[index])
+            $("#item").text(items[index]);
+            items.splice(index,1);
+            console.log(items.length);
         });
-
-        $("#qamode").click(function () {
-            items = base['qa'];
-            $("#item").text("Are you ready?")
-            console.log("switching to qa");
-        })
-
-        $("#devmode").click(function () {
-            items = base['dev'];
-            $("#item").text("Are you ready?")
-            console.log("switching to dev");
-        })
 
 
     });
