@@ -1,0 +1,79 @@
+non-functional requirements
+prototyping
+XML
+unicode
+database
+nosql
+scrum
+user story
+release
+object
+class
+package
+module
+coding style
+repository
+graph
+sql
+nosql
+scrapping
+interface
+object-oriented programing
+user
+keyboard
+compiler
+byte-code
+application
+web
+browser
+navigation
+console
+operation system
+pattern
+authorization
+profile
+plugin
+extension
+abstract class
+IDE
+syntax
+Test-Driven Development
+polymorphism
+Singleton
+Algorithms
+recursion
+hash
+list
+string
+array
+queue
+stack
+heap
+json
+code coverage
+docker
+heroku
+hosting
+support service
+application life cycle
+version control system
+release
+key-value store
+backend
+frontend
+framework
+Micro-framework
+dictionary
+polyfill
+database migration
+scalability
+source code
+rest
+http
+template
+debugger
+router
+model
+view
+controller
+service
